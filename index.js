@@ -45,12 +45,16 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
-
-
-
+function copy(input) {
+    let arrayfunc = [];
+      for(let i = 0; i < input.length; i++) {
+        arrayfunc.push(input[i]);
+      }
+    return arrayfunc;
+  }    
+  
+  const flavorsCopy = copy(originalFlavors);
+  console.log(flavorsCopy);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -64,8 +68,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(input) {
+   if (input.length = 31) {
+   return true;
+    } else {
+        return false;
+    }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,9 +89,16 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
+function addFlavor(array, newitem){
+    for(i = array.length; i > 0; i--) {
+      array[i] = array[i-1];
+    }
+    array[0] = newitem;
+    return array;
+  }
+  
+  addFlavor(originalFlavors, 'Rainbow Sherbert');
+  console.log(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,10 +112,13 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-}
-
+function removeLastFlavor(array){
+    array.splice(array.length-1);
+    return array;
+  }
+  
+  removeLastFlavor(originalFlavors);
+  console.log(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
